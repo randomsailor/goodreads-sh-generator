@@ -106,8 +106,9 @@
         <div class="card mb-3">
           <div class="card-body">
             <p>Title: <b>{{book_details.title}}</b></p>
-            <p>Author: <b>{{book_details.author}}</b></p>
+            <p>Author: <b>{{book_details.author_name}} {{book_details.author_id}}</b></p>
             <p>Pages: <b>{{book_details.pages}}</b></p>
+            <p>Points: {{book_details.item_points}}</p>
           </div>
         </div>
         {% else %}

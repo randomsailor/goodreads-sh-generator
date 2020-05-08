@@ -32,7 +32,8 @@ def get_book_details(book_url):
     # <meta content='464' property='books:page_count'>
 
 
-def get_item_values():
+def get_points(selected_content):
     points = 0
-
+    for i in selected_content:
+        points += int(i.split('-')[1])
     return points
