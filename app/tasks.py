@@ -1,12 +1,14 @@
 from urllib import request
 from bs4 import BeautifulSoup
 import lxml
-
+import ssl
 
 # https://realpython.com/flask-by-example-part-3-text-processing-with-requests-beautifulsoup-nltk/
 
 def get_book_details(book_url):
-    r = request.urlopen(book_url)
+    # todo: remove this when pushed as a test
+    ssl._create_default_https_context = ssl._create_unverified_context
+    r = request.urlopen(book_url)   
     soup = BeautifulSoup(r.read().decode(), 'lxml')
 
     book_details = dict()

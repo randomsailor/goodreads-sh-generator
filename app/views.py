@@ -31,6 +31,10 @@ def add_task():
         selected_misc = request.args.getlist('misc')
 
         book_details['item_points'] = get_points(selected_items)
+        book_details['location_points'] = get_points(selected_locations)
+        book_details['action_points'] = get_points(selected_actions)
+        book_details['cover_points'] = get_points(selected_covers)
+        book_details['theme_points'] = get_points(selected_themes)
         
         # message = request.form.getlist('item')
     # else:
