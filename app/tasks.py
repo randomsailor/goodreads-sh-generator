@@ -37,5 +37,14 @@ def get_book_details(book_url):
 def get_points(selected_content):
     points = 0
     for i in selected_content:
-        points += int(i.split('-')[1])
+        points += int(i.split(':')[0].split('-')[1])
     return points
+
+
+def make_list(selected_content):
+    final_list = list()
+    for i in selected_content:
+        point = i.split(':')[0].split('-')[1]
+        value = i.split(':')[1]
+        final_list.append(f'{value}: {point}')
+    return final_list

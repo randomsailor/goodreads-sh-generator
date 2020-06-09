@@ -15,6 +15,19 @@
 </head>
 
 <body>
+
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+
   <div class="container">
     <div class="row">
       <div class="col">
@@ -32,53 +45,78 @@
                 {% endif %}
               </div>
 
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Book Ratting
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <option class="dropdown-item" value="1">★</option>
+                  <option class="dropdown-item" value="2">★★</option>
+                  <option class="dropdown-item" value="3">★★★</option>
+                  <option class="dropdown-item" value="4">★★★★</option>
+                  <option class="dropdown-item" value="5">★★★★★</option>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only" for="rating">Rating for Cafe</label>
+                <select class="form-control" id="rating">
+                    <option>5</option>
+                    <option>4</option>
+                    <option selected>3</option>
+                    <option>2</option>
+                    <option>1</option>
+                </select>
+            </div>
+              
+
 
               <div class="content-points-group">
                 <h6>Items</h6>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="item-chest-hair" name='item' value="item-1">
+                  <input type="checkbox" class="form-check-input" id="item-chest-hair" name='item' value="item-1:Chest Hair">
                   <label class="form-check-label" for="item-chest-hair">
                     Chest Hair [1 point]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="item-pen" name='item' value='item-2'>
+                  <input type="checkbox" class="form-check-input" id="item-pen" name='item' value='item-2:Pen'>
                   <label class="form-check-label" for="item-pen">
                     Pen [2 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="item-closet" name='item' value='item-3'>
+                  <input type="checkbox" class="form-check-input" id="item-closet" name='item' value='item-3:Closet/Wardrobe'>
                   <label class="form-check-label" for="item-closet">
                     Closet/Wardrobe [3 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="item-door-knob" name='item' value='item-4'>
+                  <input type="checkbox" class="form-check-input" id="item-door-knob" name='item' value='item-4:Door knob'>
                   <label class="form-check-label" for="item-door-knob">
                     Door Knob/Door Handle [4 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="item-bottle" name='item' value='item-5'>
+                  <input type="checkbox" class="form-check-input" id="item-bottle" name='item' value='item-5:Bottle'>
                   <label class="form-check-label" for="item-bottle">
                     Bottle [5 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="item-toothbrush" name='item' value='item-6'>
+                  <input type="checkbox" class="form-check-input" id="item-toothbrush" name='item' value='item-6:Toothbrush'>
                   <label class="form-check-label" for="item-toothbrush">
                     Toothbrush [6 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="item-microwave" name='item' value='item-7'>
+                  <input type="checkbox" class="form-check-input" id="item-microwave" name='item' value='item-7:Microwave'>
                   <label class="form-check-label" for="item-microwave">
                     Microwave [7 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="item-crime-tape" name='item' value='item-8'>
+                  <input type="checkbox" class="form-check-input" id="item-crime-tape" name='item' value='item-8:Crime scene tape'>
                   <label class="form-check-label" for="item-crime-tape">
                     Crime Scene Tape [8 points]
                   </label>
@@ -92,49 +130,49 @@
               <div class="action-points-group">
                 <h6>Actions</h6>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="action-test" name='action' value="action-1">
+                  <input type="checkbox" class="form-check-input" id="action-test" name='action' value="action-1:Testing">
                   <label class="form-check-label" for="action-test">
                     Testing [1 point]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="action-69" name='action' value="action-2">
+                  <input type="checkbox" class="form-check-input" id="action-69" name='action' value="action-2:Sixty-Nine">
                   <label class="form-check-label" for="action-69">
                     sixty-nine [2 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="action-snore" name='action' value="action-3">
+                  <input type="checkbox" class="form-check-input" id="action-snore" name='action' value="action-3:Snoring">
                   <label class="form-check-label" for="action-snore">
                     Snoring [3 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="action-piercing" name='action' value="action-4">
+                  <input type="checkbox" class="form-check-input" id="action-piercing" name='action' value="action-4:Getting a piercing">
                   <label class="form-check-label" for="action-piercing">
                     Getting a piercing [4 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="action-uniform" name='action' value="action-5">
+                  <input type="checkbox" class="form-check-input" id="action-uniform" name='action' value="action-5:Putting on a uniform">
                   <label class="form-check-label" for="action-uniform">
                     Putting on a uniform [5 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="action-stairs" name='action' value="action-6">
+                  <input type="checkbox" class="form-check-input" id="action-stairs" name='action' value="action-6:Climbing/descending stairs">
                   <label class="form-check-label" for="action-stairs">
                     Climbing/descending stairs [6 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="action-hands" name='action' value="action-7">
+                  <input type="checkbox" class="form-check-input" id="action-hands" name='action' value="action-7:Shaking hands">
                   <label class="form-check-label" for="action-hands">
                     Shaking hands [7 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="action-seatbelt" name='action' value="action-8">
+                  <input type="checkbox" class="form-check-input" id="action-seatbelt" name='action' value="action-8:(Un)Doing a seatbelt">
                   <label class="form-check-label" for="action-seatbelt">
                     (Un)Doing a seatbelt [8 points]
                   </label>
@@ -148,49 +186,49 @@
               <div class="cover-points-group">
                 <h6>Covers</h6>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="cover-tail" name='cover' value="cover-1">
+                  <input type="checkbox" class="form-check-input" id="cover-tail" name='cover' value="cover-1:Tail">
                   <label class="form-check-label" for="cover-tail">
                     Tail [1 point]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="cover-scarf" name='cover' value="cover-2">
+                  <input type="checkbox" class="form-check-input" id="cover-scarf" name='cover' value="cover-2:Scarf">
                   <label class="form-check-label" for="cover-scarf">
                     Scarf [2 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="cover-wheel" name='cover' value="cover-3">
+                  <input type="checkbox" class="form-check-input" id="cover-wheel" name='cover' value="cover-3:Wheel">
                   <label class="form-check-label" for="cover-wheel">
                     Wheel [3 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="cover-child" name='cover' value="cover-4">
+                  <input type="checkbox" class="form-check-input" id="cover-child" name='cover' value="cover-4:Child">
                   <label class="form-check-label" for="cover-child">
                     Child [4 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="cover-door" name='cover' value="cover-5">
+                  <input type="checkbox" class="form-check-input" id="cover-door" name='cover' value="cover-5:Door">
                   <label class="form-check-label" for="cover-door">
                     Door[5 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="cover-jacket" name='cover' value="cover-6">
+                  <input type="checkbox" class="form-check-input" id="cover-jacket" name='cover' value="cover-6:Leather jacket">
                   <label class="form-check-label" for="cover-jacket">
                     Leather jacket [6 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="cover-instrument" name='cover' value="cover-7">
+                  <input type="checkbox" class="form-check-input" id="cover-instrument" name='cover' value="cover-7:Musical instrument">
                   <label class="form-check-label" for="cover-instrument">
                     Musical instrument [7 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="cover-legs" name='cover' value="cover-8">
+                  <input type="checkbox" class="form-check-input" id="cover-legs" name='cover' value="cover-8:8+ legs">
                   <label class="form-check-label" for="cover-legs">
                     8+ legs [8 points]
                   </label>
@@ -205,49 +243,49 @@
               <div class="location-points-group">
                 <h6>Locations</h6>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="location-loft" name='location' value="location-1">
+                  <input type="checkbox" class="form-check-input" id="location-loft" name='location' value="location-1:Loft/Attic">
                   <label class="form-check-label" for="location-loft">
                     Loft/Attic (character enters) [1 point]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="location-casino" name='location' value="location-2">
+                  <input type="checkbox" class="form-check-input" id="location-casino" name='location' value="location-2:Casino">
                   <label class="form-check-label" for="location-casino">
                     Casino (character enters) [2 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="location-waitingroom" name='location' value="location-3">
+                  <input type="checkbox" class="form-check-input" id="location-waitingroom" name='location' value="location-3:Waiting room">
                   <label class="form-check-label" for="location-waitingroom">
                     Waiting Room [3 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="location-gym" name='location' value="location-4">
+                  <input type="checkbox" class="form-check-input" id="location-gym" name='location' value="location-4:Gym">
                   <label class="form-check-label" for="location-gym">
                     Gym [4 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="location-murderscene" name='location' value="location-5">
+                  <input type="checkbox" class="form-check-input" id="location-murderscene" name='location' value="location-5:Murder scene">
                   <label class="form-check-label" for="location-murderscene">
                     Murder Scene [5 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="location-mechanics" name='location' value="location-6">
+                  <input type="checkbox" class="form-check-input" id="location-mechanics" name='location' value="location-6:Workshop/Mechanics">
                   <label class="form-check-label" for="location-mechanics">
                     Workshop/Mechanics [6 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="location-forest" name='location' value="location-7">
+                  <input type="checkbox" class="form-check-input" id="location-forest" name='location' value="location-7:Forest/Wood">
                   <label class="form-check-label" for="location-forest">
                     Forest/Wood [7 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="location-library" name='location' value="location-8">
+                  <input type="checkbox" class="form-check-input" id="location-library" name='location' value="location-8:Library">
                   <label class="form-check-label" for="location-library">
                     Library [8 points]
                   </label>
@@ -261,51 +299,51 @@
               <div class="theme-points-group">
                 <h6>Themes</h6>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="theme-newauthor" name='theme' value="theme-1">
+                  <input type="checkbox" class="form-check-input" id="theme-newauthor" name='theme' value="theme-1:New to you author">
                   <label class="form-check-label" for="theme-newauthor">
                     New to you author [1 point]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="theme-standalone" name='theme' value="theme-2">
+                  <input type="checkbox" class="form-check-input" id="theme-standalone" name='theme' value="theme-2:Standalone">
                   <label class="form-check-label" for="theme-standalone">
                     Standalone [2 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="theme-audiobook" name='theme' value="theme-3">
+                  <input type="checkbox" class="form-check-input" id="theme-audiobook" name='theme' value="theme-3:Available as an audiobook">
                   <label class="form-check-label" for="theme-audiobook">
                     Available as an audiobook [3 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="theme-editions" name='theme' value="theme-4">
+                  <input type="checkbox" class="form-check-input" id="theme-editions" name='theme' value="theme-4:Available in more than 2 editions">
                   <label class="form-check-label" for="theme-editions">
-                    >2 editions [4 points]
+                    More than 2 editions [4 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="theme-killer" name='theme' value="theme-5">
+                  <input type="checkbox" class="form-check-input" id="theme-killer" name='theme' value="theme-5:Assasin/Killer">
                   <label class="form-check-label" for="theme-killer">
                     Assasin/Killer [5 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="theme-bday" name='theme' value="theme-6">
+                  <input type="checkbox" class="form-check-input" id="theme-bday" name='theme' value="theme-6:Released in May">
                   <label class="form-check-label" for="theme-bday">
                     Released in your birthday month [6 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="theme-versatile" name='theme' value="theme-7">
+                  <input type="checkbox" class="form-check-input" id="theme-versatile" name='theme' value="theme-7:Versatile couple">
                   <label class="form-check-label" for="theme-versatile">
                     Versatile couple [7 points]
                   </label>
                 </div>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="theme-aprsep" name='theme' value="theme-8">
+                  <input type="checkbox" class="form-check-input" id="theme-aprsep" name='theme' value="theme-8:Released April-September 2019">
                   <label class="form-check-label" for="theme-aprsep">
-                    Apr-Sep 2019 [8 points]
+                    Apr-Sep 2019 release [8 points]
                   </label>
                 </div>
               </div>
@@ -329,28 +367,34 @@
 
               <div class="card mb-3">
                 <textarea id="myInput" cols="60" rows="30" readonly="readonly">
-      Title: {{book_details.title}}
-      Author: {{book_details.author_name}} {{book_details.author_id}}
-      Pages: {{book_details.pages}}
+Title: {{book_details.title}}
+Author: {{book_details.author_name}} {{book_details.author_id}}
+Date Finished: 
+Star Rating: 
+Pages: {{book_details.pages}}
       
-      Points: 
+------------
 
+ITEMS: {{book_details.item_points}}
+{% if item_list %}{% for element in item_list %}{{element}}
+{% endfor %}{% endif %}
+ACTIONS: {{book_details.action_points}}
+{% if action_list %}{% for element in action_list %}{{element}}
+{% endfor %}{% endif %}
+COVER: {{book_details.cover_points}}
+{% if cover_list %}{% for element in cover_list %}{{element}}
+{% endfor %}{% endif %}
+LOCATIONS: {{book_details.location_points}}
+{% if location_list %}{% for element in location_list %}{{element}}
+{% endfor %}{% endif %}
+THEMES: {{book_details.theme_points}}
+{% if themes_list %}{% for element in themes_list %}{{element}}
+{% endfor %}{% endif %}
 
-      Items: {{book_details.item_points}}
-
-
-      Actions: {{book_details.action_points}}
-
-      Cover: {{book_details.cover_points}}
-
-      Locations: {{book_details.location_points}}
-
-      Themes: {{book_details.theme_points}}
-
-      {%if bonus %}
-      Bonus Points:
-      {% endif %}
-      Total Points:
+{%if bonus %}
+Bonus Points:
+{% endif %}
+Total Points:
 
                 </textarea>
               </div>
@@ -381,6 +425,12 @@
   </script>
 
 
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- from https://getbootstrap.com/docs/4.4/getting-started/introduction/-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
