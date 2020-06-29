@@ -12,12 +12,34 @@ def get_book_details(book_url):
     soup = BeautifulSoup(r.read().decode(), 'lxml')
 
     book_details = dict()
-    book_details['title'] = soup.find('meta', {'property':'og:title'})['content']
+    temp = soup.find('h1', {'id':'bookTitle'}).contents
+    book_details['title'] = temp[0].strip()
+    book_details['title_id'] = soup.find('input', {'id':'book_id'})['value']
     # book_details['author'] = soup.find('meta', {'property':'books:author'})['content'].split('/show/')[1]
-    book_details['pages'] = soup.find('meta', {'property':'books:page_count'})['content']
     author_details = soup.find('meta', {'property':'books:author'})['content'].split('/show/')[1]
     book_details['author_id'] = author_details.split('.')[0]
     book_details['author_name'] = author_details.split('.')[1].replace('_', ' ')
+
+    book_details['pages'] = soup.find('meta', {'property':'books:page_count'})['content']
+    if int(book_details['pages']) >= 400:
+        book_details['pages_points'] = "5 points"
+        book_details['misc_points'] = 5
+    elif int(book_details['pages']) >= 300:
+        book_details['pages_points'] = "4 points"   
+        book_details['misc_points'] = 4
+    elif int(book_details['pages']) >= 200:
+        book_details['pages_points'] = "3 points"
+        book_details['misc_points'] = 3
+    elif int(book_details['pages']) >= 100:
+        book_details['pages_points'] = "2 points"
+        book_details['misc_points'] = 2
+    elif int(book_details['pages']) >= 1:
+        book_details['pages_points'] = "1 point"
+        book_details['misc_points'] = 1
+    else:
+        book_details['pages_points'] = "??? point"
+        book_details['misc_points'] = 0
+
 
     return book_details
 
@@ -46,5 +68,7 @@ def make_list(selected_content):
     for i in selected_content:
         point = i.split(':')[0].split('-')[1]
         value = i.split(':')[1]
-        final_list.append(f'{value}: {point}')
+        point_word = "points" if point != '1' else "point"
+
+        final_list.append(f'{value}: {point} {point_word}')
     return final_list

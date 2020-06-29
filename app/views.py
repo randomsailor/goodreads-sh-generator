@@ -18,6 +18,7 @@ def add_task():
     action_list = list()
     cover_list = list()
     themes_list = list()
+    misc_list = list()
 
 
     if  request.args:
@@ -50,10 +51,15 @@ def add_task():
 
 
         selected_misc = request.args.getlist('misc')
+        book_details['misc_points'] += get_points(selected_misc)
+        misc_list = make_list(selected_misc)
         
         # message = request.form.getlist('item')
     # else:
     #     message = f"Invalid URL, needs to be like 'https://www.goodreads.com/book/show/'"
+
+        book_details['total_points'] = book_details['item_points'] + book_details['location_points'] + \
+            book_details['action_points'] + book_details['cover_points'] + book_details['theme_points'] + book_details['misc_points'] 
 
         return render_template("add_task.html", message=message, book_details=book_details, item_list=item_list,
         location_list=location_list, action_list=action_list, cover_list=cover_list, themes_list=themes_list)
